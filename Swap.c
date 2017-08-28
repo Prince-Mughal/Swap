@@ -67,8 +67,9 @@ int main(void){
      /* Allocate a piece of memory */
      void* tmp = (void*)malloc(size);
      /* Check Memory Allocation */
-     if( tmp == NULL)
+     if( tmp == NULL){
          fprintf(stderr,"Error: Couldn't Allocate Memory.\n");
+         exit(EXIT_FAILURE);}
      /* copy iData1 to tmp */
      memcpy(tmp,iData1,size);
      /* copy iData2 to iData1 */
